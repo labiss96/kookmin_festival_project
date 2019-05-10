@@ -20,4 +20,14 @@ import festivalapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', festivalapp.views.home, name='home'),
+    path('fest/<int:fest_id>', festivalapp.views.detail, name="detail"),
+    path('fest/lost', festivalapp.views.lost, name="lost"),
+    path('fest/talk', festivalapp.views.talk, name="talk"),
+    path('fest/new', festivalapp.views.new, name="new"),
+
+    path('fest/create', festivalapp.views.create, name="create"),
+    path('delete/<int:delete_fest_id>', festivalapp.views.delete, name='delete'),
+    path('edit/<int:edit_fest_id>', festivalapp.views.edit, name='edit'),
+    path('update/<int:update_fest_id>', festivalapp.views.update, name='update'),
+    
 ]

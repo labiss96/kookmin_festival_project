@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- 부트스트랩 -->
+
+    <br><br>
+
+<body>
+
+    <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">홈페이지로 가기</a>
+    <a href="{% url 'new' %} " class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">글 작성하기</a>
+    <br>
+
+    <div class="container"> <br>
+    {% for fest in talks.all %}
+ 
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{fest.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{fest.pub_date}}</h6>
+                <p class="card-text">{{fest.summary}} <a href="{% url 'detail' fest.id %}">...[더보기]</a></p>
+                <a href="{% url 'edit' fest.id%}" class="card-link">수정하기</a>
+                <a href="{% url 'delete' fest.id %}" class="card-link">삭제하기</a>
+        </div>
+    </div>
+
+    <br>
+    {%endfor%}
+</div>
+
+</body>
+
+</html>
