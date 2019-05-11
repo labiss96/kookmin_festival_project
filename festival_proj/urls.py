@@ -29,5 +29,7 @@ urlpatterns = [
     path('delete/<int:delete_fest_id>', festivalapp.views.delete, name='delete'),
     path('edit/<int:edit_fest_id>', festivalapp.views.edit, name='edit'),
     path('update/<int:update_fest_id>', festivalapp.views.update, name='update'),
+
+    path('schedule/', festivalapp.views.schedule, name="schedule"),
     
 ]

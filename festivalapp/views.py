@@ -46,4 +46,7 @@ def update(request, update_fest_id):
     update_fest.save()
     return redirect('/fest/'+str(update_fest.id))
 
+def schedule(request):
+    return render(request, 'schedule.html')
+
     
