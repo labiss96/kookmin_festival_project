@@ -33,6 +33,9 @@
         <h1>{{details.title}}</h1>
         <p>{{details.pub_date}}</p>
         <p>{{details.body}}</p>
+
+        <a href="{% url 'talk' %}" class=" btn btn-primary btn-lg" role="button" aria-pressed="true">아무말 게시판</a>
+        <a href="{% url 'lost' %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">분실물 게시판</a>
     </div>
 
 
