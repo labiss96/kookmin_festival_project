@@ -1,50 +1,92 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- 부트스트랩 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!-- 부트스트랩 -->
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <br><br>
 
 <body>
 
-    <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">홈페이지로 가기</a>
-
-    <br>
-
+ 
+ <div class='pont'>
     <div class="container">
-        <form action="{%url 'create_lost' %}">
-
-
-            <h4>제목: </h4>
-            <input type="text" name='title' placeholder="제목을 입력하세요">
-            <br>
-            <h4>작성자: </h4>
-            <input type="text" name="writer" placeholder="작성자를 입력하세요">
-            <h4>비밀번호: </h4>
-            <input type="password" name="password" placeholder="비밀번호를 입력하세요">
-            <br>
-            <h4>본문 : </h4>
-            <br>
-            <textarea name="body" id="" cols="30" rows="10" placeholder="본문을 입력하세요"></textarea>
-            <br>
-            <input class="btn btn-dark" type="submit" value="제출하기">
-
-        </form>
-    </div>
-
+            <div class="row">
+         <div class="col-12">   
+        <div style = "padding: 7em 5em 2em 0em;"> 
+        <h1>작성하기</h1>
+        </div>
+        <div class='back'>
+                <a href="{% url 'home' %}">GO MAIN PAGE</a>
+                <br>
+                <a href="{% url 'lost' %}">BACK</a>
+                </div>
+                <br>
+                <div class='form'>
+                    <form action="{%url 'create_lost' %}">
+    <h4>제목: 
+    <input type="text" name='title' placeholder="제목을 입력하세요">
+    </h4>
+    <h4>작성자: 
+    <input type="text" name="writer" placeholder="작성자를 입력하세요">
+</h4>
+<h4>비밀번호: </h4>
+<input type="password" name="password" placeholder="비밀번호를 입력하세요">
+    <h4>글작성 : 
+    <br>
+    <textarea name="body" id="" cols="10" rows="50" placeholder="본문을 입력하세요"></textarea>
+    <br>
+    <div style = "padding: 1em 5em 5em 17em;"> 
+    <input class="btn btn-dark" type="submit" value="제출하기">
+</h4>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 
 </html>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Song+Myung');
+.pont{font-family: 'Do Hyeon', sans-serif;
+text-align: left;
+color:snow;
+}
+a{
+    all: unset;
+   
+}
+a:hover { color:rgb(15, 172, 151); text-decoration: none; }
+body{
+    background-color:black;
+}
+.back{
+    font-size: 30px;
+    text-align: right;
+}
+textarea{
+    background-color:white;
+
+ } 
+ .textarea{
+    background-color: white;
+ }
+ h1{
+    font-size: 70px;
+    text-align: left;
+ }
+ body{
+    background-image: url('{%static "what.png"%}' );
+    background-size: cover;
+ }
+ .form{
+    font-size: 10px;
+ }
+</style>

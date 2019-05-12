@@ -28,6 +28,7 @@
 
 
     <div class="container">
+        <div class='pont'>
         <h1>자세한 내용</h1>
         <br><br>
         <h1>{{details.title}}</h1>
@@ -37,9 +38,48 @@
         <a href="{% url 'talk' %}" class=" btn btn-primary btn-lg" role="button" aria-pressed="true">아무말 게시판</a>
         <a href="{% url 'lost' %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">분실물 게시판</a>
     </div>
-
+</div>
 
 
 </body>
 
 </html>
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Song+Myung');
+        .pont{font-family: 'Do Hyeon', sans-serif;
+        text-align: left;
+        color:snow;
+        }
+        p{
+            color: aliceblue;
+        }
+        a{
+            all: unset;
+           
+        }
+        a:hover { color:rgb(15, 172, 151); text-decoration: none; }
+        body{
+            background-color:rgb(151, 120, 120);
+        }
+        .back{
+            font-size: 30px;
+            text-align: right;
+        }
+        textarea{
+            background-color:white;
+        
+         } 
+         .textarea{
+            background-color: white;
+         }
+         h1{
+            font-size: 70px;
+            text-align: left;
+         }
+         body{
+           background-color: black;
+         }
+         .form{
+            font-size: 10px;
+         }
+        </style>

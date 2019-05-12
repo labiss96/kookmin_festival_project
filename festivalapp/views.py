@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Fest
 from .models import Lost
+def festivalapp(request):
+    return render(request, 'templates/home.html')
+    
 
 def home(request):
     fests = Fest.objects
