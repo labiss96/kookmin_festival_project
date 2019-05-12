@@ -82,7 +82,5 @@ def update_lost(request, update_lost_id):
     update_lost.body2 = request.GET['body']
     update_lost.save()
     return redirect('/fest_lost/'+str(update_lost.id))
-def schedule(request):
-    return render(request, 'schedule.html')
 
     

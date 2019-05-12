@@ -25,8 +25,5 @@ urlpatterns = [
     path('delete_lost/<int:delete_lost_id>', festivalapp.views.delete_lost, name='delete_lost'),
     path('edit_lost/<int:edit_lost_id>', festivalapp.views.edit_lost, name='edit_lost'),
     path('update_lost/<int:update_lost_id>', festivalapp.views.update_lost, name='update_lost'),
-
-
-    path('schedule/', festivalapp.views.schedule, name="schedule"),
     
 ]
