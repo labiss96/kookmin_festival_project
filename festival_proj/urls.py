@@ -6,6 +6,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', festivalapp.views.home, name='home'),
 
+    path('fest/check_edit/<int:fest_id>', festivalapp.views.check_edit, name='check_edit'),
+    path('fest/check_delete/<int:fest_id>', festivalapp.views.check_delete, name='check_delete'),
+
+    path('fest/check_edit_lost/<int:lost_id>', festivalapp.views.check_edit_lost, name='check_edit_lost'),
+    path('fest/check_delete_lost/<int:lost_id>', festivalapp.views.check_delete_lost, name='check_delete_lost'),
+
     path('fest/<int:fest_id>', festivalapp.views.detail, name="detail"),
     path('fest_lost/<int:lost_id>', festivalapp.views.detail_lost, name="detail_lost"),
 

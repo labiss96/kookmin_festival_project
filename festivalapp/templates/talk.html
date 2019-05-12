@@ -32,8 +32,9 @@
                 <h5 class="card-title">{{fest.title}} <br> 내 이름은 : {{fest.writer}} </h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{fest.pub_date}}</h6>
                 <p class="card-text">{{fest.summary}} <a href="{% url 'detail' fest.id %}">...[더보기]</a></p>
-                <a href="{% url 'edit' fest.id%}" class="card-link">수정하기</a>
-                <a href="{% url 'delete' fest.id %}" class="card-link">삭제하기</a>
+                <a href="{% url 'check_edit' fest.id%}" class="card-link">수정하기</a>
+                <a href="{% url 'check_delete' fest.id %}" class="card-link">삭제하기</a>
+                
         </div>
     </div>
 

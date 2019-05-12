@@ -32,8 +32,8 @@
                 <h5 class="card-title">{{lost.title2}} <br> 내 이름은 : {{lost.writer2}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{lost.pub_date2}}</h6>
                 <p class="card-text">{{lost.summary}} <a href="{% url 'detail_lost' lost.id %}">...[더보기]</a></p>
-                <a href="{% url 'edit_lost' lost.id%}" class="card-link">수정하기</a>
-                <a href="{% url 'delete_lost' lost.id %}" class="card-link">삭제하기</a>
+                <a href="{% url 'check_edit_lost' lost.id%}" class="card-link">수정하기</a>
+                <a href="{% url 'check_delete_lost' lost.id %}" class="card-link">삭제하기</a>
          </div>
         </div>
         <br>
