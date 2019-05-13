@@ -1,45 +1,89 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- 부트스트랩 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!-- 부트스트랩 -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
     <br><br>
 
 <body>
-
-    <a href="{% url 'home' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">홈페이지로 가기</a>
-    <a href="{% url 'new' %} " class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">글 작성하기</a>
-    <br>
-
-
-
-
     <div class="container">
-        <h1>자세한 내용</h1>
-        <br><br>
-        <h1>{{details_lost.title2}}</h1>
-        <p>{{details_lost.pub_date2}}</p>
-        <p>{{details_lost.body2}}</p>
+        <div class="pont">
+            <div class="col-10">
+                <div style="padding: 11em 4em 0em 0em;">
 
-        <a href="{% url 'talk' %}" class="btn btn-primary btn-lg" role="button" aria-pressed="true">아무말 게시판</a>
-        <a href="{% url 'lost' %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">분실물 게시판</a>
+                    <a href="{% url 'home' %}">홈페이지로 가기 </a><a>/</a>
+                    <a href="{% url 'new_lost' %} ">글 작성하기</a>
+                    <hr>
+                </div>
+                <p class='d'>세부내용</p>
+                <div class='b'>
+                    <p>{{details_lost.title2}} /
+                            {{details_lost.pub_date2}}</p>
+
+                </div>
+                <h1>{{details_lost.body2}}</h1>
+                <div class='c'>
+                    <a href="{% url 'talk' %}">아무말 게시판 /</a>
+                    <a href="{% url 'lost' %}">분실물 게시판</a>
+                </div>
+
+            </div>
+        </div>
     </div>
-
-
+    </div>
 
 </body>
 
 </html>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Song+Myung');
+
+    .pont {
+        font-family: 'Do Hyeon';
+        color: snow;
+    }
+
+    .b {
+        font-size: 50px;
+        text-align: left;
+
+    }
+.d{
+    font-size: 40px;
+}
+    h1 {
+        text-align: left;
+        font-size: 60px;
+    }
+
+    .c {
+        text-align: right;
+
+    }
+
+    a {
+        all: unset;
+        font-size: 45px;
+    }
+
+    a:hover {
+        color: rgb(196, 119, 20);
+        text-decoration: none;
+    }
+
+    body {
+        background-image: url('{%static "dd.PNG"%}');
+        background-size: cover;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+</style>

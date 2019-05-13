@@ -1,5 +1,59 @@
-<p>패스워드를 입력해주세요</p>
-<form action="{% url 'delete_lost' lost_id %}">
-    <input type="password" name="password">
-    <input class="btn btn-dark" type="submit" value="삭제하기">
-</form>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</head>
+
+<body>
+        <div class="container">
+    <div class='pont'>
+        <div class="row">
+            <div class="col-12">
+                <div style="padding: 5em 4em 0em 0em;">
+                    <p>패스워드를 입력해주세요</p>
+                </div>
+                <form action="{% url 'delete_lost' lost_id %}">
+                    <input type="password" name="password">
+                    <div class='e'>
+                    <input class="btn btn-dark" type="submit" value="삭제하기">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Song+Myung');
+
+    .pont {
+        font-family: 'Do Hyeon';
+        color: snow;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    body {
+        background-image: url('{%static "dd2.PNG"%}');
+        background-size: cover;
+
+    }
+    p{
+        text-align: left;
+    }
+    .e{
+        text-align: right;
+    }
