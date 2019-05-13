@@ -1,3 +1,4 @@
+{% load staticfiles%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +49,14 @@
             <center>
                 <button id="mainButton" type="button" class="btn btn-outline-light btn-lg"
                     onclick="window.open('/fest/talk', 'board')">아무말 게시판</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <br>
+                        <img src="{%static 'atm.png'%}" alt="..." style="width:700px;">
+                    </div>
+
+                </div>
             </center>
         </div>
         <div class="col-lg-4  col-sm-12">
@@ -64,7 +73,17 @@
     <section class="bg-light font_Arita" id="schedule">
         <div class="container" id="button">
             <div>
-                <button class="button" href="">축제 안내 지도</button>
+                <button id="mainButton" class="button" href="">축제 안내 지도</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <br>
+                        <img src="{%static 'atm.png'%}" alt="..." style="width:700px;">
+                    </div>
+
+                </div>
+
+
                 <button class="button" onclick="window.open('/fest/talk', 'board')">아무말 게시판</button>
                 <button class="button" onclick="window.open('/fest/lost', 'board')">분실물 게시판</button>
             </div>
@@ -95,8 +114,31 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/59494647_735210583543127_786931514360201216_n.jpg?_nc_cat=108&_nc_ht=scontent-icn1-1.xx&oh=579238f85d5eaf6b1403e2ffc4db863c&oe=5D774A4F"
-                                class="d-block w-100" id="starImg" alt="...">
+                            <img src="{%static 'a.jpg'%}" class="d-block w-100" id="starImg" alt="...">
+                            <div class="carousel-caption d-none d-md-block" id="starSNS">
+                                <p></p>
+                                <a href="https://www.instagram.com/kimhaon777/?hl=ko" target="_blank"><img
+                                        src="https://svgsilh.com/svg/1594387.svg" id="instagram" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{%static 'b.jpg'%}" class="d-block w-100" id="starImg" alt="...">
+                            <div class="carousel-caption d-none d-md-block" id="starSNS">
+                                <p></p>
+                                <a href="https://www.instagram.com/mamamoo_official/?hl=ko" target="_blank"><img
+                                        src="https://svgsilh.com/svg/1594387.svg" id="instagram" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{%static 'c.jpg'%}" class="d-block w-100" id="starImg" alt="...">
+                            <div class="carousel-caption d-none d-md-block" id="starSNS">
+                                <p></p>
+                                <a href="https://www.instagram.com/kiff_websterb/?hl=ko" target="_blank"><img
+                                        src="https://svgsilh.com/svg/1594387.svg" id="instagram" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{%static 'd.jpg'%}" class="d-block w-100" id="starImg" alt="...">
                             <div class="carousel-caption d-none d-md-block" id="starSNS">
                                 <p></p>
                                 <a href="https://www.instagram.com/?hl=ko" target="_blank"><img
@@ -104,17 +146,15 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/58766044_735210550209797_8444741856759119872_n.jpg?_nc_cat=100&_nc_ht=scontent-icn1-1.xx&oh=a4a6ae9366e28aab866f17bf0056faf6&oe=5D2BE79E"
-                                class="d-block w-100" id="starImg" alt="...">
+                            <img src="{%static 'e.jpg'%}" class="d-block w-100" id="starImg" alt="...">
                             <div class="carousel-caption d-none d-md-block" id="starSNS">
                                 <p></p>
-                                <a href="https://www.instagram.com/?hl=ko" target="_blank"><img
+                                <a href="https://www.instagram.com/leegititssam/?hl=ko" target="_blank"><img
                                         src="https://svgsilh.com/svg/1594387.svg" id="instagram" alt=""></a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/58680961_734642870266565_2049562396560719872_n.jpg?_nc_cat=111&_nc_ht=scontent-icn1-1.xx&oh=68c6e26785e4ab1f9db5e1ebaf7b4cb9&oe=5D75B671"
-                                class="d-block w-100" id="starImg" alt="...">
+                            <img src="{%static 'f.jpg'%}" class="d-block w-100" id="starImg" alt="...">
                             <div class="carousel-caption d-none d-md-block" id="starSNS">
                                 <p></p>
                                 <a href="https://www.instagram.com/?hl=ko" target="_blank"><img
@@ -152,7 +192,7 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            14일 일정입니다.
+                            <img src="{%static 'schedule14.jpg'%}" alt="..." style="height:500px;">
                         </div>
                     </div>
                 </div>
@@ -167,7 +207,7 @@
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
-                            15일 일정입니다.
+                            <img src="{%static 'schedule15.jpg'%}" alt="..." style="height:500px;">
                         </div>
                     </div>
                 </div>
@@ -183,7 +223,7 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            16~17일 일정입니다.
+                            <img src="{%static 'schedule16.jpg'%}" alt="..." style="height:500px;">
                         </div>
                     </div>
                 </div>
@@ -199,55 +239,119 @@
 
 
     <!-- footer -->
+    <footer class="footer text-center" style="background-color : white;">
+        <br>
+        <br>
+        <br>
 
-    <footer class="footer-distributed" style="font-size: 1em; margin-top:0px">
-        <p>
-        </p>
         <div class="row">
-
-            <p>
-            </p>
-            <div class="col-lg-a col-sm-b">
-                <div style="margin-left: 30px;"><img class="likelionlogo"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROPF1SAbAin8lzfhfaQE6wgFw7n9quJuFoE0yOgvxbjiJnZ-EY"
-                        alt="Collabo dea44ab8d374336b63ed4812235684f38ca851c4fe38a9263686b23d3bf860da"
-                        style="height:100px;">
-                    <!--<img src="assets/kmulion.png" align="left" width="105" height="105" hspace="15">-->
-
-
-                    02707 서울특별시 성북구 정릉로 77 국민대학교
-                    <br>
-                    Email : kmu@likelion.org
-                    <a>
-                        <br>
-                        COPYRIGHT© 2018 KOOKMIN-LIKELION.
-                        <br>
-                        ALL RIGHTS RESERVED.
-                        <br>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <div class="media-wrap">
+                    <a href="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROPF1SAbAin8lzfhfaQE6wgFw7n9quJuFoE0yOgvxbjiJnZ-EY"
+                            alt="" media-simple="true" style="width : 130px;">
                     </a>
-
                 </div>
             </div>
-            <div class="footer-right col-lg-a col-sm-b" style="text-align:right">
-                <strong style="font-size:20px">CONTACT</strong>
-                <br>
-                <br>
-                <a href="https://www.facebook.com/LikeLionKookmin/"><img class="fb_icon"
-                        src="http://festival.kookmin.ac.kr/assets/fb_icon-ca56697fa7872703557550b8539c0629f5f1bebdbf42527785f92720c070966a.png"
-                        alt="Fb icon ca56697fa7872703557550b8539c0629f5f1bebdbf42527785f92720c070966a"></a>
-                <a href="https://www.instagram.com/likelion_kmu/?hl=ko"><img class="fb_icon"
-                        src="http://festival.kookmin.ac.kr/assets/insta_icon-9541bbdc4f6bc54cd2e790a89bde1b178f06b0070386030297770225480e4fdc.png"
-                        alt="Insta icon 9541bbdc4f6bc54cd2e790a89bde1b178f06b0070386030297770225480e4fdc"></a>
-                <a href="https://likelion.net/"><img class="lion_icon"
-                        src="http://festival.kookmin.ac.kr/assets/likelion-116bf974830c01dce4560961d77e71f69dc08116a46ff352bdcf1d715b671815.png"
-                        alt="Likelion 116bf974830c01dce4560961d77e71f69dc08116a46ff352bdcf1d715b671815"></a>
-
+            <div class="col-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Address
+                </h5>
+                <p class="mbr-text">
+                    02707 서울특별시
+                    <br> 성북구 정릉로 77 국민대학교
+                </p>
             </div>
-            <p></p>
+            <div class="col-2 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Contacts
+                </h5>
+                <p class="mbr-text">
+                    Email : kmu@likelion.org
+                    <br>Phone: +1 (0) 000 0000 001
+                    <br>Fax: +1 (0) 000 0000 002
+                </p>
+            </div>
+            <div class="col-2 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text">
+                    <a class="text-white" href="">Website builder</a>
+                    <br><a class="text-white" href="">Download for Windows</a>
+                    <br><a class="text-white" href="">Download for Mac</a>
+                </p>
+            </div>
+
         </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="row">
+                    <div class="col-6">
+                        <p class="mbr-text mbr-fonts-style display-7" style="text-align: left; margin-left: 10px;">
+                            © Copyright 2019 KOOKMIN-LIKELION. All Rights Reserved
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="social-list align-right">
+                            <div class="soc-item">
+                                <a href="https://search.naver.com/search.naver?sm=top_hty&amp;fbm=1&amp;ie=utf8&amp;query=02707+%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C"
+                                    target="_blank">
+                                    <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="" target="_blank">
+                                    <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="" target="_blank">
+                                    <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="" target="_blank">
+                                    <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="" target="_blank">
+                                    <span class="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="" target="_blank">
+                                    <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"
+                                        media-simple="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br>
+        <br>
     </footer>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Song+Myung');
+
         .newhome img {
             width: 100%;
             height: auto;
@@ -261,8 +365,8 @@
         }
 
         #mainButton {
-            width: 300px;
-            height: 200px;
+            width: 150px;
+            height: 100px;
             font-size: 200%;
         }
 
@@ -391,7 +495,7 @@
         #imgSlide {
             margin: 0 auto;
             margin-bottom: 5%;
-            width: 350px;
+            width: 800px;
             font-size: 20px;
         }
 
@@ -423,10 +527,10 @@
 
         /* 버튼 디자인 구현 */
         #button {
-            padding : 1%;
-            background-color:#000;
+            padding: 1%;
+            background-color: #000;
         }
-        
+
         .button {
             display: inline-block;
             width: 20%;
@@ -437,8 +541,8 @@
             outline: none;
             border-radius: 0.5em;
             margin-left: 50px;
-            margin-bottom : 20px;
-            font-size : 150%;
+            margin-bottom: 20px;
+            font-size: 150%;
             font-family: 'Do Hyeon';
         }
 
@@ -498,6 +602,71 @@
             width: 0;
             background-color: #59b1eb;
         }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .newhome img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button_back {
+            background-color: #100B33;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        #mainButton {
+            width: 220px;
+            height: 100px;
+            font-size: 150%;
+        }
     </style>
 
 
@@ -511,6 +680,36 @@
     function fnMove(seq) {
         var offset = $("#div" + seq).offset();
         $('html, body').animate({ scrollTop: offset.top }, 400);
+    }
+
+</script>
+
+<script>
+
+    //et the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("mainButton");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 
 </script>
